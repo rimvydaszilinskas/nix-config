@@ -72,6 +72,11 @@
               "pinentry-mac" # GPG pinentry for macOS
               "go-task/tap/go-task" # Taskfile runner
               "dashlane/tap/dashlane-cli" # Dashlane CLI for password management
+              "tmux" # Terminal multiplexer
+              "lazygit" # Terminal UI for git commands
+              "jq" # Command-line JSON processor
+              "yq" # Command-line YAML processor
+              "kubectx" # kubectl context switcher
             ];
             casks = [
               "visual-studio-code"
@@ -92,7 +97,13 @@
               "1password-cli"
 
               "slack"
+              "notion"
+
               "spotify"
+
+              "loop" # Mac tiling window manager
+              "stats" # System monitoring tool for macOS in the menu bar
+              "hiddenbar" # Menu bar app to hide icons and manage space
             ];
 
             masApps = {
@@ -108,7 +119,10 @@
 
           system.defaults.dock = {
             autohide = true;
-            tilesize = 40;
+            tilesize = 30;
+            magnification = true;
+            largesize = 50;
+            minimize-to-application = false;
           };
 
           nix.settings.experimental-features = "nix-command flakes";
@@ -124,7 +138,6 @@
     in
     {
       darwinConfigurations."Rimvydass-MacBook-Pro" = nix-darwin.lib.darwinSystem {
-        # FIXED: Passed 'inputs' through to modules if needed
         specialArgs = { inherit inputs; };
         modules = [
           configuration
