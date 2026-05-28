@@ -7,6 +7,7 @@
   home.sessionPath = [
     "/opt/homebrew/bin"
     "/opt/homebrew/sbin"
+    "/Users/rim/.local/bin"
     "/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
   ];
 
@@ -39,7 +40,10 @@
     # Custom keybindings (Optional but helpful)
     initContent = ''
       # Ensure Homebrew CLI tools are available in interactive shells.
-      export PATH="/opt/homebrew/bin:/opt/homebrew/sbin:$PATH"
+      export PATH="/opt/homebrew/bin:/opt/homebrew/sbin:/Users/rim/.local/bin:$PATH"
+
+      # Initialize thefuck alias.
+      eval "$(thefuck --alias)"
 
       # Bind up/down arrows to history search
       bindkey '^[[A' history-beginning-search-backward

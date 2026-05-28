@@ -69,6 +69,7 @@
               "opencode" # Open source coding assistant
               "thefuck" # Command line tool to correct previous console commands
               "gnupg" # GPG for encryption/signing
+              "go-task/tap/go-task"
             ];
             casks = [
               "visual-studio-code"
