@@ -52,7 +52,7 @@
     enableZshIntegration = true;
     settings = {
       add_newline = false;
-      format = "$directory$git_branch$git_status$kubernetes$aws$gcloud$azure$cmd_duration$line_break$character";
+      format = "$directory$git_branch$git_status$kubernetes$aws$gcloud$azure$cmd_duration$character";
 
       directory = {
         truncation_length = 3;
