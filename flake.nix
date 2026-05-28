@@ -70,7 +70,8 @@
               "thefuck" # Command line tool to correct previous console commands
               "gnupg" # GPG for encryption/signing
               "pinentry-mac" # GPG pinentry for macOS
-              "go-task/tap/go-task"
+              "go-task/tap/go-task" # Taskfile runner
+              "dashlane/tap/dashlane-cli" # Dashlane CLI for password management
             ];
             casks = [
               "visual-studio-code"
