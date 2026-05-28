@@ -6,11 +6,10 @@
     nix-darwin.url = "github:LnL7/nix-darwin";
     nix-darwin.inputs.nixpkgs.follows = "nixpkgs";
 
-    home-manager.url = "github:nix-community/home-manager";
+    home-manager.url = "github:nix-community/home-manager/master";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
   };
 
-  # FIXED: Added home-manager to the arguments here
   outputs =
     inputs@{
       self,
@@ -69,8 +68,9 @@
               "hashicorp/tap/terraform" # Terraform from HashiCorp tap
               "fzf" # Fuzzy finder for command line
               "k9s" # Kubernetes dashboard CLI
-              "speedtest"
+              "speedtest-cli" # Internet speed test CLI
               "opencode"
+              "thefuck"
             ];
             casks = [
               "visual-studio-code"
@@ -100,7 +100,7 @@
           };
 
           environment.shellAliases = {
-            drb = "sudo darwin-rebuild switch --flake ~/.config/nix-darwin";
+            nix-rebuild = "sudo darwin-rebuild switch --flake ~/.config/nix-darwin";
             tf = "terraform";
             k = "kubectl";
           };
