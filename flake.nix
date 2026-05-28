@@ -53,9 +53,6 @@
             enable = true;
             onActivation.cleanup = "uninstall";
             onActivation.autoUpdate = true;
-            taps = [
-              "hashicorp/tap"
-            ];
 
             # FIXED: "brews" instead of "brew" is correct for nix-darwin,
             # but usually it's plural. You had "brews" which is correct.
@@ -65,7 +62,7 @@
               "awscli" # AWS CLI
               "gh" # GitHub CLI
               "kubernetes-cli" # kubectl
-              "hashicorp/tap/terraform" # Terraform from HashiCorp tap
+              "tfenv" # Terraform version manager
               "fzf" # Fuzzy finder for command line
               "k9s" # Kubernetes dashboard CLI
               "speedtest-cli" # Internet speed test CLI

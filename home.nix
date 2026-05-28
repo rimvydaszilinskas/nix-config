@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ ... }:
 {
   home.stateVersion = "24.11"; # Match your current Nixpkgs release
   home.enableNixpkgsReleaseCheck = false;
@@ -36,21 +36,10 @@
       theme = "";
     };
 
-    plugins = [
-      {
-        name = "powerlevel10k";
-        src = pkgs.zsh-powerlevel10k;
-        file = "share/zsh-powerlevel10k/powerlevel10k.zsh-theme";
-      }
-    ];
-
     # Custom keybindings (Optional but helpful)
     initContent = ''
       # Ensure Homebrew CLI tools are available in interactive shells.
       export PATH="/opt/homebrew/bin:/opt/homebrew/sbin:$PATH"
-
-      source ${pkgs.zsh-powerlevel10k}/share/zsh-powerlevel10k/powerlevel10k.zsh-theme
-      [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
       # Bind up/down arrows to history search
       bindkey '^[[A' history-beginning-search-backward
@@ -58,10 +47,52 @@
     '';
   };
 
-  home.file.".p10k.zsh".source = ./p10k.zsh;
-
   programs.starship = {
-    enable = false;
+    enable = true;
+    enableZshIntegration = true;
+    settings = {
+      add_newline = false;
+      format = "$directory$git_branch$git_status$kubernetes$aws$gcloud$azure$cmd_duration$line_break$character";
+
+      directory = {
+        truncation_length = 3;
+      };
+
+      git_branch = {
+        symbol = "git:";
+        format = "[$symbol$branch]($style) ";
+        style = "bold purple";
+      };
+
+      git_status = {
+        format = "([$all_status$ahead_behind]($style) )";
+        style = "bold red";
+      };
+
+      kubernetes = {
+        disabled = false;
+        format = "[k8s:$context( $namespace)]($style) ";
+        style = "bold cyan";
+      };
+
+      aws = {
+        disabled = false;
+        format = "[aws:$profile( @$region)]($style) ";
+        style = "bold yellow";
+      };
+
+      gcloud = {
+        disabled = false;
+        format = "[gcp:$active( $project)]($style) ";
+        style = "bold blue";
+      };
+
+      azure = {
+        disabled = false;
+        format = "[az:$subscription]($style) ";
+        style = "bold blue";
+      };
+    };
   };
 
   programs.git = {
