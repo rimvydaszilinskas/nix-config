@@ -66,8 +66,9 @@
               "fzf" # Fuzzy finder for command line
               "k9s" # Kubernetes dashboard CLI
               "speedtest-cli" # Internet speed test CLI
-              "opencode"
-              "thefuck"
+              "opencode" # Open source coding assistant
+              "thefuck" # Command line tool to correct previous console commands
+              "gnupg" # GPG for encryption/signing
             ];
             casks = [
               "visual-studio-code"
