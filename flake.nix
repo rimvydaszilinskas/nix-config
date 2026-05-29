@@ -82,6 +82,7 @@
               "kubectx" # kubectl context switcher
               "just" # Command runner similar to Makefile but simpler
               "pre-commit" # A framework for managing and maintaining multi-language pre-commit hooks."
+              "k6" # Load testing tool for developers and testers 
             ];
             casks = [
               "visual-studio-code" # VSCode
@@ -91,9 +92,10 @@
               "terraform-linters/tap/tflint" # Terraform linter
 
               # AI tools
-              "claude"
-              "google-gemini"
-              "raycast"
+              "claude" # Anthropic's AI assistant
+              "claude-code" # AI coding assistant by Anthropic
+              "google-gemini" # Google's AI assistant
+              "raycast" # AI-powered productivity tool
 
               # Browsers
               "brave-browser"
