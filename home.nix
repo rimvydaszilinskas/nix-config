@@ -42,8 +42,16 @@
       # Ensure Homebrew CLI tools are available in interactive shells.
       export PATH="/opt/homebrew/bin:/opt/homebrew/sbin:/Users/rim/.local/bin:$PATH"
 
+      # Enable kubectl plugins installed via krew.
+      export PATH="''${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
+
       # Initialize thefuck alias.
       eval "$(thefuck --alias)"
+
+      # OCI CLI completion via argcomplete (non-interactive).
+      if command -v register-python-argcomplete >/dev/null 2>&1; then
+        eval "$(register-python-argcomplete --shell zsh oci 2>/dev/null)"
+      fi
 
       # Bind up/down arrows to history search
       bindkey '^[[A' history-beginning-search-backward

@@ -45,6 +45,7 @@
             pkgs.go
             pkgs.hugo
             pkgs.oci-cli
+            pkgs.python3Packages.argcomplete
             pkgs.azure-cli
             pkgs.google-cloud-sdk # Includes gcloud and Gemini
           ];
@@ -62,6 +63,8 @@
               "awscli" # AWS CLI
               "gh" # GitHub CLI
               "kubernetes-cli" # kubectl
+              "helm" # Kubernetes package manager
+              "krew" # kubectl plugin manager
               "tfenv" # Terraform version manager
               "fzf" # Fuzzy finder for command line
               "k9s" # Kubernetes dashboard CLI
@@ -74,14 +77,17 @@
               "dashlane/tap/dashlane-cli" # Dashlane CLI for password management
               "tmux" # Terminal multiplexer
               "lazygit" # Terminal UI for git commands
+              "lazydocker" # Terminal UI for Docker management
               "jq" # Command-line JSON processor
               "yq" # Command-line YAML processor
               "kubectx" # kubectl context switcher
+              "just" # Command runner similar to Makefile but simpler
             ];
             casks = [
-              "visual-studio-code"
-              "iterm2"
-              "font-meslo-lg-nerd-font"
+              "visual-studio-code" # VSCode
+              "iterm2" # Terminal replacement 
+              "font-meslo-lg-nerd-font" # Font for terminal and code editor
+              "orbstack" # Docker alternative for macOS
 
               # AI tools
               "claude"
@@ -89,7 +95,6 @@
               "raycast"
 
               # Browsers
-              "vivaldi"
               "brave-browser"
 
               # Password managers
@@ -104,6 +109,8 @@
               "loop" # Mac tiling window manager
               "stats" # System monitoring tool for macOS in the menu bar
               "hiddenbar" # Menu bar app to hide icons and manage space
+
+              "logi-options-plus" # Logitech mouse and keyboard configuration software
             ];
 
             masApps = {
