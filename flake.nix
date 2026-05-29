@@ -55,13 +55,12 @@
             onActivation.cleanup = "uninstall";
             onActivation.autoUpdate = true;
 
-            # FIXED: "brews" instead of "brew" is correct for nix-darwin,
-            # but usually it's plural. You had "brews" which is correct.
             brews = [
               "mas" # Macbooks Apps Store
               # Development tools
               "awscli" # AWS CLI
               "gh" # GitHub CLI
+              "glab" # GitLab CLI
               "kubernetes-cli" # kubectl
               "helm" # Kubernetes package manager
               "krew" # kubectl plugin manager
@@ -82,12 +81,14 @@
               "yq" # Command-line YAML processor
               "kubectx" # kubectl context switcher
               "just" # Command runner similar to Makefile but simpler
+              "pre-commit" # A framework for managing and maintaining multi-language pre-commit hooks."
             ];
             casks = [
               "visual-studio-code" # VSCode
               "iterm2" # Terminal replacement 
               "font-meslo-lg-nerd-font" # Font for terminal and code editor
               "orbstack" # Docker alternative for macOS
+              "terraform-linters/tap/tflint" # Terraform linter
 
               # AI tools
               "claude"
@@ -110,7 +111,7 @@
               "stats" # System monitoring tool for macOS in the menu bar
               "hiddenbar" # Menu bar app to hide icons and manage space
 
-              "logi-options-plus" # Logitech mouse and keyboard configuration software
+              "logi-options+" # Logitech mouse and keyboard configuration software
             ];
 
             masApps = {
