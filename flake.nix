@@ -63,6 +63,7 @@
               "glab" # GitLab CLI
               "kubernetes-cli" # kubectl
               "helm" # Kubernetes package manager
+              "helmfile" # Declarative spec for deploying helm charts
               "krew" # kubectl plugin manager
               "tfenv" # Terraform version manager
               "fzf" # Fuzzy finder for command line
@@ -81,8 +82,8 @@
               "yq" # Command-line YAML processor
               "kubectx" # kubectl context switcher
               "just" # Command runner similar to Makefile but simpler
-              "pre-commit" # A framework for managing and maintaining multi-language pre-commit hooks."
-              "k6" # Load testing tool for developers and testers 
+              "pre-commit" # A framework for managing and maintaining multi-language pre-commit hooks"
+              "k6" # Load testing tool for developers and testers
             ];
             casks = [
               "visual-studio-code" # VSCode
