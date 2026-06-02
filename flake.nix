@@ -84,6 +84,8 @@
               "just" # Command runner similar to Makefile but simpler
               "pre-commit" # A framework for managing and maintaining multi-language pre-commit hooks"
               "k6" # Load testing tool for developers and testers
+              "exoscale/tap/exoscale-cli" # Exoscale CLI for managing Exoscale cloud resources
+              "age" # File encryption tool
             ];
             casks = [
               "visual-studio-code" # VSCode
