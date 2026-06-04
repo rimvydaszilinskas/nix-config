@@ -28,31 +28,33 @@
           system.primaryUser = "rim";
 
           environment.systemPackages = [
-            pkgs.vim
-            pkgs.neovim
-            pkgs.git
-            pkgs.ripgrep
-            pkgs.nixfmt
-            pkgs.bat
-            pkgs.eza
-            pkgs.bottom
-            pkgs.zoxide
-            pkgs.uv
-            pkgs.direnv
-            pkgs.pipenv
-            pkgs.atuin
-            pkgs.rustup
-            pkgs.go
-            pkgs.hugo
-            pkgs.oci-cli
-            pkgs.python3Packages.argcomplete
-            pkgs.azure-cli
+            pkgs.vim # Terminal-based text editor, essential for quick edits and remote work
+            pkgs.neovim # Modern Vim fork with better defaults and plugin ecosystem
+            pkgs.git # Version control system
+            pkgs.ripgrep # Fast search tool
+            pkgs.nixfmt # Nix expression formatter
+            pkgs.bat # A cat clone with syntax highlighting and Git integration
+            pkgs.eza # Modern ls alternative with git integration and better UI
+            pkgs.bottom # Alternative to top with more features and better UI
+            pkgs.zoxide # Fast directory jumper
+            pkgs.uv # Python package manager
+            pkgs.direnv # Environment switcher for project directories
+            pkgs.pipenv # Python dependency manager
+            pkgs.atuin # Shell history replacement with search and sync capabilities
+            pkgs.rustup # Rust toolchain installer and version manager
+            pkgs.go # Go programming language
+            pkgs.hugo # Static site generator
+            pkgs.oci-cli # Oracle Cloud Infrastructure CLI
+            pkgs.python3Packages.argcomplete # Python package for command-line argument completion
+            pkgs.azure-cli # Azure CLI for managing Azure resources
             pkgs.google-cloud-sdk # Includes gcloud and Gemini
+            pkgs.ollama # Ollama CLI for running local LLMs
           ];
 
           homebrew = {
             enable = true;
             onActivation.cleanup = "uninstall";
+            onActivation.extraFlags = [ "--force" ];
             onActivation.autoUpdate = true;
 
             brews = [
@@ -62,10 +64,12 @@
               "gh" # GitHub CLI
               "glab" # GitLab CLI
               "kubernetes-cli" # kubectl
+              "clowdhaus/taps/eksup" # EKS upgrade checker, alternative to kubent
               "helm" # Kubernetes package manager
               "helmfile" # Declarative spec for deploying helm charts
               "krew" # kubectl plugin manager
               "tfenv" # Terraform version manager
+              "terragrunt" # Terraform wrapper for running tasks
               "fzf" # Fuzzy finder for command line
               "k9s" # Kubernetes dashboard CLI
               "speedtest-cli" # Internet speed test CLI
@@ -127,7 +131,11 @@
           environment.shellAliases = {
             nix-rebuild = "sudo darwin-rebuild switch --flake ~/.config/nix-darwin";
             tf = "terraform";
+            tg = "terragrunt";
             k = "kubectl";
+
+            # Divio specific aliases
+            lint = "docker run --rm -it --env-file=.lint -v $(pwd):/app divio/lint /bin/lint";
           };
 
           system.defaults.dock = {
