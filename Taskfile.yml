@@ -1,0 +1,17 @@
+# yaml-language-server: $schema=https://taskfile.dev/schema.json
+
+version: '3'
+
+vars:
+  GREETING: Hello, world!
+
+tasks:
+  check:
+    cmds:
+      - nix flake check ~/.config/nix-darwin
+  test:build:
+    cmds:
+      - darwin-rebuild build --flake ~/.config/nix-darwin#Rimvydass-MacBook-Pro
+  flake:show:
+    cmds:
+      - nix flake show ~/.config/nix-darwin
