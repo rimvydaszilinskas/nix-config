@@ -1,4 +1,4 @@
-{ ... }:
+{ username, homeDirectory, ... }:
 {
   home.stateVersion = "24.11"; # Match your current Nixpkgs release
   home.enableNixpkgsReleaseCheck = false;
@@ -7,7 +7,7 @@
   home.sessionPath = [
     "/opt/homebrew/bin"
     "/opt/homebrew/sbin"
-    "/Users/rim/.local/bin"
+    "${homeDirectory}/.local/bin"
     "/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
   ];
 
@@ -40,7 +40,7 @@
     # Custom keybindings (Optional but helpful)
     initContent = ''
       # Ensure Homebrew CLI tools are available in interactive shells.
-      export PATH="/opt/homebrew/bin:/opt/homebrew/sbin:/Users/rim/.local/bin:$PATH"
+      export PATH="/opt/homebrew/bin:/opt/homebrew/sbin:${homeDirectory}/.local/bin:$PATH"
 
       # Enable kubectl plugins installed via krew.
       export PATH="''${KREW_ROOT:-$HOME/.krew}/bin:$PATH"

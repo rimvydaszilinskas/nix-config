@@ -40,6 +40,7 @@
             {
               home-manager.useGlobalPkgs = true;
               home-manager.useUserPackages = true;
+              home-manager.extraSpecialArgs = { inherit username homeDirectory; };
               home-manager.users.${username} = import ./modules/home.nix;
             }
           ];
@@ -54,8 +55,8 @@
 
       darwinConfigurations."personal-macbook" = mkDarwinSystem {
         hostModule = ./hosts/personal/default.nix;
-        username = "rim"; # update if different on personal Mac
-        homeDirectory = "/Users/rim"; # update if different on personal Mac
+        username = "rimvydaszilinskas"; # update if different on personal Mac
+        homeDirectory = "/Users/rimvydaszilinskas"; # update if different on personal Mac
       };
     };
 }
