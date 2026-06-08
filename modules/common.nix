@@ -204,7 +204,7 @@
 
   system.defaults.trackpad = {
     Clicking = true; # Tap-to-click (no physical press needed)
-    TrackpadThreeFingerDrag = true; # Three-finger drag to move windows
+    TrackpadThreeFingerDrag = false; # Three-finger drag to move windows
     TrackpadRightClick = true; # Two-finger tap = right-click
   };
 
