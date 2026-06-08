@@ -40,6 +40,7 @@
     pkgs.go # Go programming language toolchain
     pkgs.hugo # Static site generator
     pkgs.ollama # CLI for running local LLMs
+    pkgs.oci-cli # Oracle Cloud Infrastructure CLI
   ];
 
   # ── Homebrew ──────────────────────────────────────────────────────────────────
@@ -228,6 +229,28 @@
     ShowCategory = 100; # 100 = All Processes, 102 = My Processes, 107 = Windowed Processes
     SortColumn = "CPUUsage"; # Sort processes by this column on launch
     SortDirection = 0; # 0 = descending, 1 = ascending
+  };
+
+  # ── Login agents ─────────────────────────────────────────────────────────────
+  # Launch GUI apps at login via launchd user agents.
+
+  launchd.user.agents = {
+    loop = {
+      serviceConfig = {
+        ProgramArguments = [ "/Applications/Loop.app/Contents/MacOS/Loop" ];
+        RunAtLoad = true;
+        KeepAlive = false;
+        ProcessType = "Interactive";
+      };
+    };
+    stats = {
+      serviceConfig = {
+        ProgramArguments = [ "/Applications/Stats.app/Contents/MacOS/Stats" ];
+        RunAtLoad = true;
+        KeepAlive = false;
+        ProcessType = "Interactive";
+      };
+    };
   };
 
   # ── Versioning ────────────────────────────────────────────────────────────────

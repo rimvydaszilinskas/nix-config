@@ -3,7 +3,6 @@
   nixpkgs.hostPlatform = "aarch64-darwin";
 
   environment.systemPackages = [
-    pkgs.oci-cli # Oracle Cloud Infrastructure CLI
     pkgs.python3Packages.argcomplete # Python package for command-line argument completion
     pkgs.azure-cli # Azure CLI for managing Azure resources
     pkgs.google-cloud-sdk # Includes gcloud and Gemini
