@@ -160,7 +160,7 @@
     magnification = true; # Enlarge icons on hover
     largesize = 50; # Magnified icon size in pixels
     minimize-to-application = false; # Minimise windows into their app icon
-    show-recents = false; # Don't show recently opened apps in the dock
+    show-recents = true; # Don't show recently opened apps in the dock
     mru-spaces = false; # Don't reorder spaces based on most recent use
     orientation = "bottom"; # Dock position: "left", "bottom", or "right"
     show-process-indicators = true; # Show a dot under running applications

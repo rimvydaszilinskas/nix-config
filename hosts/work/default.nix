@@ -14,7 +14,6 @@
     "k6" # Load testing tool for developers and testers
     "exoscale/tap/exoscale-cli" # Exoscale CLI for managing Exoscale cloud resources
     "age" # File encryption tool
-    "notion" # Document collaboration tool
     "clowdhaus/taps/eksup" # EKS upgrade checker, alternative to kubent
     "tmux" # Terminal multiplexer
   ];
@@ -23,6 +22,7 @@
     "claude" # Anthropic's AI assistant
     "claude-code" # AI coding assistant by Anthropic
     "raycast" # AI-powered productivity tool
+    "notion" # Document collaboration tool
   ];
 
   system.defaults.dock.persistent-apps = [
@@ -30,10 +30,15 @@
     "/System/Applications/Messages.app"
     "/System/Applications/Calendar.app"
     "/System/Applications/Mail.app"
+    "/Applications/Slack.app"
     "/Applications/Visual Studio Code.app"
     "/Applications/Claude.app"
     "/Applications/Gemini.app"
     "/Applications/iTerm.app"
+    "/Applications/Spotify.app"
+    "/Applications/1Password.app"
+    "/Applications/Dashlane.app"
+    "/Applications/Notion.app"
     "/System/Applications/System Settings.app"
   ];
 
