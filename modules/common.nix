@@ -180,6 +180,10 @@
     NewWindowTarget = "Home"; # New Finder window opens at home directory
   };
 
+  system.defaults.CustomUserPreferences."com.apple.finder" = {
+    CalculateAllSizes = true; # Show folder sizes in list view
+  };
+
   system.defaults.NSGlobalDomain = {
     # ── Autocorrect / text substitution ──────────────────────────────────────
     NSAutomaticCapitalizationEnabled = false; # No auto-capitalisation
