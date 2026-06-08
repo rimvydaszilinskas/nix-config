@@ -53,7 +53,7 @@
         homeDirectory = "/Users/rim";
       };
 
-      darwinConfigurations."personal-macbook" = mkDarwinSystem {
+      darwinConfigurations."Rims-MacBook-Pro" = mkDarwinSystem {
         hostModule = ./hosts/personal/default.nix;
         username = "rimvydaszilinskas"; # update if different on personal Mac
         homeDirectory = "/Users/rimvydaszilinskas"; # update if different on personal Mac

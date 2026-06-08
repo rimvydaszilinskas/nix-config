@@ -18,7 +18,6 @@
     pkgs.zoxide # Fast directory jumper
     pkgs.uv # Python package manager
     pkgs.direnv # Environment switcher for project directories
-    pkgs.pipenv # Python dependency manager
     pkgs.atuin # Shell history replacement with search and sync capabilities
     pkgs.rustup # Rust toolchain installer and version manager
     pkgs.go # Go programming language
@@ -39,7 +38,6 @@
       "gh" # GitHub CLI
       "glab" # GitLab CLI
       "kubernetes-cli" # kubectl
-      "clowdhaus/taps/eksup" # EKS upgrade checker, alternative to kubent
       "helm" # Kubernetes package manager
       "helmfile" # Declarative spec for deploying helm charts
       "krew" # kubectl plugin manager
@@ -48,13 +46,11 @@
       "fzf" # Fuzzy finder for command line
       "k9s" # Kubernetes dashboard CLI
       "speedtest-cli" # Internet speed test CLI
-      "opencode" # Open source coding assistant
       "thefuck" # Command line tool to correct previous console commands
       "gnupg" # GPG for encryption/signing
       "pinentry-mac" # GPG pinentry for macOS
       "go-task/tap/go-task" # Taskfile runner
       "dashlane/tap/dashlane-cli" # Dashlane CLI for password management
-      "tmux" # Terminal multiplexer
       "lazygit" # Terminal UI for git commands
       "lazydocker" # Terminal UI for Docker management
       "jq" # Command-line JSON processor
@@ -78,8 +74,9 @@
       "1password"
       "1password-cli"
 
+      "google-gemini" # Google's AI assistant
+
       "slack"
-      "notion"
 
       "spotify"
 
