@@ -19,7 +19,8 @@
 
     # Better history handling
     history = {
-      size = 10000;
+      size = 100000;
+      save = 100000;
       path = "$HOME/.zsh_history";
       ignoreAllDups = true;
     };
