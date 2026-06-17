@@ -15,3 +15,6 @@ tasks:
   flake:show:
     cmds:
       - nix flake show ~/.config/nix-darwin
+  flake:upgrade:
+    cmds:
+      - nix flake update ~/.config/nix-darwin

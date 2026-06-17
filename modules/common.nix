@@ -52,6 +52,7 @@
     onActivation = {
       cleanup = "uninstall"; # Remove packages no longer listed here on each rebuild
       autoUpdate = true; # Run `brew update` before installing
+      upgrade = true; # Upgrade outdated packages before installing
       extraFlags = [ "--force" ]; # Pass --force to brew upgrade/install
     };
 
@@ -85,6 +86,8 @@
       "go-task/tap/go-task" # Task runner using Taskfile.yml
       "thefuck" # Corrects the previous console command when you type `fuck`
       "speedtest-cli" # Measure internet upload/download speed from the terminal
+      "watch" # Utility for running a command repeatedly and showing the output
+      "nmap" # Network scanning tool
 
       # ── Security & secrets ───────────────────────────────────────────────────
       "gnupg" # GnuPG — encrypt, sign, and verify files and communications
