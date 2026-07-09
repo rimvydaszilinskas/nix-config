@@ -141,7 +141,7 @@
   # ── Shell aliases ─────────────────────────────────────────────────────────────
 
   environment.shellAliases = {
-    nix-rebuild = "sudo darwin-rebuild switch --flake ~/.config/nix-darwin";
+    nix-rebuild = "~/.config/nix-darwin/scripts/nix-rebuild-trusted.sh";
     tf = "terraform";
     tg = "terragrunt";
     k = "kubectl";
