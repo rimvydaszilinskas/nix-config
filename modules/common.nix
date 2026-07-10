@@ -41,6 +41,7 @@
     pkgs.hugo # Static site generator
     pkgs.ollama # CLI for running local LLMs
     pkgs.oci-cli # Oracle Cloud Infrastructure CLI
+    pkgs.tailscale # VPN service for secure remote access
   ];
 
   # ── Homebrew ──────────────────────────────────────────────────────────────────
@@ -237,6 +238,13 @@
     SortColumn = "CPUUsage"; # Sort processes by this column on launch
     SortDirection = 0; # 0 = descending, 1 = ascending
   };
+
+  # ── Services ─────────────────────────────────────────────────────────────────
+  # Enable and configure macOS services (daemons and agents) via launchd.
+  services.tailscale = {
+    enable = true;
+  };
+
 
   # ── Login agents ─────────────────────────────────────────────────────────────
   # Launch GUI apps at login via launchd user agents.
