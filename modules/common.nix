@@ -1,4 +1,10 @@
-{ pkgs, self, username, homeDirectory, ... }:
+{
+  pkgs,
+  self,
+  username,
+  homeDirectory,
+  ...
+}:
 {
   # Disable the nix module provided by nix-darwin — nix itself is managed externally (e.g. Determinate Nix)
   nix.enable = false;
@@ -16,7 +22,10 @@
     # Enable the unified CLI ("nix build", "nix run", etc.) and flakes
     experimental-features = "nix-command flakes";
     # Users that may add trusted binary caches and build with --option
-    trusted-users = [ "root" username ];
+    trusted-users = [
+      "root"
+      username
+    ];
   };
 
   # ── System packages ───────────────────────────────────────────────────────────
@@ -244,7 +253,6 @@
   services.tailscale = {
     enable = true;
   };
-
 
   # ── Login agents ─────────────────────────────────────────────────────────────
   # Launch GUI apps at login via launchd user agents.
