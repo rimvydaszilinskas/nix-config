@@ -4,6 +4,10 @@
 
   # Add personal-only packages, brews, casks, and aliases here.
 
+  homebrew.casks = [
+    "vlc" # Open-source media player
+  ];
+
   system.defaults.dock.persistent-apps = [
     "/Applications/Brave Browser.app"
     "/System/Applications/Messages.app"
