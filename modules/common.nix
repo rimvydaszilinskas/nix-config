@@ -50,7 +50,7 @@
     pkgs.hugo # Static site generator
     pkgs.ollama # CLI for running local LLMs
     pkgs.oci-cli # Oracle Cloud Infrastructure CLI
-    pkgs.tailscale # VPN service for secure remote access
+    # pkgs.tailscale # VPN service for secure remote access
   ];
 
   # ── Homebrew ──────────────────────────────────────────────────────────────────
@@ -145,6 +145,7 @@
 
     masApps = {
       "Dashlane" = 517914548;
+      "Tailscale" = 1475387142;
     };
   };
 
@@ -250,9 +251,9 @@
 
   # ── Services ─────────────────────────────────────────────────────────────────
   # Enable and configure macOS services (daemons and agents) via launchd.
-  services.tailscale = {
-    enable = true;
-  };
+  # services.tailscale = {
+  #   enable = true;
+  # };
 
   # ── Login agents ─────────────────────────────────────────────────────────────
   # Launch GUI apps at login via launchd user agents.
