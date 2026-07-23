@@ -17,3 +17,4 @@ brew trust "${TAPS[@]}" 2>/dev/null || true
 
 echo "Running nix-rebuild..."
 sudo darwin-rebuild switch --flake ~/.config/nix-darwin
+brew cleanup

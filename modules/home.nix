@@ -46,6 +46,9 @@
       # Enable kubectl plugins installed via krew.
       export PATH="''${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
 
+      # OrbStack: command-line tools and integration
+      source ~/.orbstack/shell/init.zsh 2>/dev/null || :
+
       # Initialize thefuck alias.
       eval "$(thefuck --alias)"
 

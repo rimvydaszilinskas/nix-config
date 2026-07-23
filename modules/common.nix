@@ -50,7 +50,6 @@
     pkgs.hugo # Static site generator
     pkgs.ollama # CLI for running local LLMs
     pkgs.oci-cli # Oracle Cloud Infrastructure CLI
-    # pkgs.tailscale # VPN service for secure remote access
   ];
 
   # ── Homebrew ──────────────────────────────────────────────────────────────────
@@ -59,8 +58,13 @@
 
   homebrew = {
     enable = true;
+    taps = [
+      "terraform-linters/tap"
+      "go-task/tap"
+      "dashlane/tap"
+    ];
     onActivation = {
-      cleanup = "uninstall"; # Remove packages no longer listed here on each rebuild
+      cleanup = "none"; # Cleanup is deprecated in newer Homebrew versions
       autoUpdate = true; # Run `brew update` before installing
       upgrade = true; # Upgrade outdated packages before installing
       extraFlags = [ "--force" ]; # Pass --force to brew upgrade/install
@@ -98,6 +102,7 @@
       "speedtest-cli" # Measure internet upload/download speed from the terminal
       "watch" # Utility for running a command repeatedly and showing the output
       "nmap" # Network scanning tool
+      "ripgrep" # Recursively search directories
 
       # ── Security & secrets ───────────────────────────────────────────────────
       "gnupg" # GnuPG — encrypt, sign, and verify files and communications
@@ -248,12 +253,6 @@
     SortColumn = "CPUUsage"; # Sort processes by this column on launch
     SortDirection = 0; # 0 = descending, 1 = ascending
   };
-
-  # ── Services ─────────────────────────────────────────────────────────────────
-  # Enable and configure macOS services (daemons and agents) via launchd.
-  # services.tailscale = {
-  #   enable = true;
-  # };
 
   # ── Login agents ─────────────────────────────────────────────────────────────
   # Launch GUI apps at login via launchd user agents.
