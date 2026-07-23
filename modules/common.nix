@@ -146,6 +146,7 @@
 
       # ── Peripherals ───────────────────────────────────────────────────────────
       "logi-options+" # Configure Logitech mice and keyboards (remapping, gestures)
+      "balenaetcher" # OS image flashing
     ];
 
     masApps = {
