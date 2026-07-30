@@ -132,6 +132,7 @@
 
       # ── AI ───────────────────────────────────────────────────────────────────
       "google-gemini" # Google's AI assistant desktop app
+      "codex" # ChatGPT coding assistant
 
       # ── Communication ─────────────────────────────────────────────────────────
       "slack" # Team messaging
