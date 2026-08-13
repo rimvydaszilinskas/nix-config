@@ -57,6 +57,8 @@
         eval "$(register-python-argcomplete --shell zsh oci 2>/dev/null)"
       fi
 
+      eval "$(/opt/homebrew/bin/mise activate zsh)"
+
       # Bind up/down arrows to history search
       bindkey '^[[A' history-beginning-search-backward
       bindkey '^[[B' history-beginning-search-forward

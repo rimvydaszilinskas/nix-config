@@ -72,6 +72,7 @@
 
     brews = [
       "mas" # Mac App Store CLI — install and update App Store apps from the terminal
+      "btop" # Visual top alternative with graphs and metrics
 
       # ── Cloud & infrastructure ──────────────────────────────────────────────
       "awscli" # AWS CLI v2 — interact with AWS services
@@ -98,18 +99,15 @@
       "yq" # YAML/TOML/XML processor, same syntax as jq
       "just" # Simple command runner (Makefile alternative)
       "go-task/tap/go-task" # Task runner using Taskfile.yml
-      "thefuck" # Corrects the previous console command when you type `fuck`
       "speedtest-cli" # Measure internet upload/download speed from the terminal
       "watch" # Utility for running a command repeatedly and showing the output
       "nmap" # Network scanning tool
       "ripgrep" # Recursively search directories
+      "mise" # Development environment manager
 
       # ── Security & secrets ───────────────────────────────────────────────────
       "gnupg" # GnuPG — encrypt, sign, and verify files and communications
       "pinentry-mac" # GUI pinentry dialog so GPG can prompt for passphrase on macOS
-
-      # ── Containers ───────────────────────────────────────────────────────────
-      "lazydocker" # Terminal UI for Docker — manage containers, images, logs
 
       # ── Password management ───────────────────────────────────────────────────
       "dashlane/tap/dashlane-cli" # Dashlane CLI — fetch secrets and credentials
@@ -131,8 +129,9 @@
       "1password-cli" # 1Password CLI — inject secrets into scripts and env vars
 
       # ── AI ───────────────────────────────────────────────────────────────────
-      "google-gemini" # Google's AI assistant desktop app
       "codex" # ChatGPT coding assistant
+      "claude" # Anthropic's AI assistant
+      "claude-code" # AI coding assistant by Anthropic
 
       # ── Communication ─────────────────────────────────────────────────────────
       "slack" # Team messaging

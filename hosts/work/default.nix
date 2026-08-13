@@ -18,8 +18,6 @@
   ];
 
   homebrew.casks = [
-    "claude" # Anthropic's AI assistant
-    "claude-code" # AI coding assistant by Anthropic
     "raycast" # AI-powered productivity tool
     "notion" # Document collaboration tool
   ];
@@ -29,6 +27,7 @@
     "/System/Applications/Messages.app"
     "/System/Applications/Calendar.app"
     "/System/Applications/Mail.app"
+    "/System/Applications/Notes.app"
     "/Applications/Slack.app"
     "/Applications/Visual Studio Code.app"
     "/Applications/Claude.app"
