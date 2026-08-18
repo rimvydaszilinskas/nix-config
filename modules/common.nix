@@ -129,6 +129,7 @@
       "1password-cli" # 1Password CLI — inject secrets into scripts and env vars
 
       # ── AI ───────────────────────────────────────────────────────────────────
+      "google-gemini" # Google's Gemini AI assistant
       "codex" # ChatGPT coding assistant
       "claude" # Anthropic's AI assistant
       "claude-code" # AI coding assistant by Anthropic

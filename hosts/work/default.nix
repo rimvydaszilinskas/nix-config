@@ -20,10 +20,12 @@
   homebrew.casks = [
     "raycast" # AI-powered productivity tool
     "notion" # Document collaboration tool
+    "google-chrome"
   ];
 
   system.defaults.dock.persistent-apps = [
     "/Applications/Brave Browser.app"
+    "/Applications/Google Chrome.app"
     "/System/Applications/Messages.app"
     "/System/Applications/Calendar.app"
     "/System/Applications/Mail.app"
