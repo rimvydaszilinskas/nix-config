@@ -50,6 +50,7 @@
     pkgs.hugo # Static site generator
     pkgs.ollama # CLI for running local LLMs
     pkgs.oci-cli # Oracle Cloud Infrastructure CLI
+    pkgs.insomnia # API client for testing and debugging REST and GraphQL APIs
   ];
 
   # ── Homebrew ──────────────────────────────────────────────────────────────────
@@ -60,7 +61,6 @@
     enable = true;
     taps = [
       "terraform-linters/tap"
-      "go-task/tap"
       "dashlane/tap"
     ];
     onActivation = {
@@ -98,7 +98,7 @@
       "jq" # Command-line JSON processor and pretty-printer
       "yq" # YAML/TOML/XML processor, same syntax as jq
       "just" # Simple command runner (Makefile alternative)
-      "go-task/tap/go-task" # Task runner using Taskfile.yml
+      "go-task" # Task runner using Taskfile.yml
       "speedtest-cli" # Measure internet upload/download speed from the terminal
       "watch" # Utility for running a command repeatedly and showing the output
       "nmap" # Network scanning tool

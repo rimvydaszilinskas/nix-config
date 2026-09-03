@@ -8,7 +8,6 @@ TAPS=(
   "clowdhaus/taps"
   "dashlane/tap"
   "exoscale/tap"
-  "go-task/tap"
   "terraform-linters/tap"
 )
 
