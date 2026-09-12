@@ -11,6 +11,9 @@
 
   # Enable zsh system-wide so it appears in /etc/shells and is usable as a login shell
   programs.zsh.enable = true;
+  # home-manager's oh-my-zsh (modules/home.nix) already runs compinit; a second
+  # system-level compinit here doubles the compaudit fpath scan on every shell start.
+  programs.zsh.enableCompletion = false;
 
   # Bind the declared username to a home directory and designate it as the primary GUI user
   users.users.${username}.home = homeDirectory;

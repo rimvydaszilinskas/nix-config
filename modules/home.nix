@@ -49,8 +49,13 @@
       # OrbStack: command-line tools and integration
       source ~/.orbstack/shell/init.zsh 2>/dev/null || :
 
-      # Initialize thefuck alias.
-      eval "$(thefuck --alias)"
+      # Initialize thefuck alias lazily: thefuck's own init forks a Python
+      # interpreter (~0.5-1s) on every shell start; defer that until first use.
+      fuck() {
+        eval "$(thefuck --alias)"
+        unfunction fuck
+        fuck "$@"
+      }
 
       # OCI CLI completion via argcomplete (non-interactive).
       if command -v register-python-argcomplete >/dev/null 2>&1; then
