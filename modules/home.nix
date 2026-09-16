@@ -9,6 +9,7 @@
     "/opt/homebrew/sbin"
     "${homeDirectory}/.local/bin"
     "/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
+    "${homeDirectory}/.cargo/bin"
   ];
 
   programs.zsh = {
