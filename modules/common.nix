@@ -133,7 +133,6 @@
 
       # ── AI ───────────────────────────────────────────────────────────────────
       "google-gemini" # Google's Gemini AI assistant
-      "codex" # ChatGPT coding assistant
       "claude" # Anthropic's AI assistant
       "claude-code" # AI coding assistant by Anthropic
 
