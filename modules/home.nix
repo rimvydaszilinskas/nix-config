@@ -18,6 +18,18 @@
     autosuggestion.enable = true;
     syntaxHighlighting.enable = true;
 
+    # Preserves what used to live in the hand-written ~/.zprofile before
+    # home-manager took over managing that file.
+    profileExtra = ''
+      eval "$(/opt/homebrew/bin/brew shellenv)"
+
+      # Added by OrbStack: command-line tools and integration
+      # This won't be added again if you remove it.
+      source ~/.orbstack/shell/init.zsh 2>/dev/null || :
+
+      export PATH="${homeDirectory}/code/flutter/bin:$PATH"
+    '';
+
     # Better history handling
     history = {
       size = 100000;
